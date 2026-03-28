@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>class FtrRuby::DCAT_Record - RDoc Documentation</title>
+
+
+  <meta
+    name="keywords"
+    content="ruby,class,FtrRuby::DCAT_Record"
+  >
+
+    <meta
+      name="description"
+      content="class FtrRuby::DCAT_Record: Represents a single FAIR Test as a DCAT-compliant DataService with additional FAIR-specific metadata. This class generates RDF metadata (in a DCAT + D"
+    >
+
+
+
+
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="class FtrRuby::DCAT_Record - RDoc Documentation">
+
+
+
+    <meta property="og:description" content="Represents a single FAIR Test as a DCAT-compliant DataService with additional FAIR-specific metadata. This class generates RDF metadata (in a DCAT + D">
+
+
+
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="class FtrRuby::DCAT_Record - RDoc Documentation">
+
+
+
+    <meta name="twitter:description" content="Represents a single FAIR Test as a DCAT-compliant DataService with additional FAIR-specific metadata. This class generates RDF metadata (in a DCAT + D">
+
+
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script
+  src="../js/theme-toggle.js?v=7.2.0"
+></script>
+
+<script
+  src="../js/search_navigation.js?v=7.2.0"
+  defer
+></script>
+
+<script
+  src="../js/search_data.js?v=7.2.0"
+  defer
+></script>
+
+<script
+  src="../js/search_ranker.js?v=7.2.0"
+  defer
+></script>
+
+<script
+  src="../js/search_controller.js?v=7.2.0"
+  defer
+></script>
+
+<script
+  src="../js/c_highlighter.js?v=7.2.0"
+  defer
+></script>
+
+<script
+  src="../js/bash_highlighter.js?v=7.2.0"
+  defer
+></script>
+
+<script
+  src="../js/aliki.js?v=7.2.0"
+  defer
+></script>
+
+<link
+  href="../css/rdoc.css?v=7.2.0"
+  rel="stylesheet"
+>
+
+
+
+
+<body role="document" class="class has-toc">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <!-- Chevron (right arrow) - used for expand/collapse -->
+  <symbol
+    id="icon-chevron"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </symbol>
+
+  <!-- File/Document - Pages section -->
+  <symbol
+    id="icon-file"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path
+      d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"
+    ></path>
+
+    <polyline points="14 2 14 8 20 8"></polyline>
+  </symbol>
+
+  <!-- Layers/Stack - Classes and Modules section -->
+  <symbol
+    id="icon-layers"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+    <polyline points="2 17 12 22 22 17"></polyline>
+    <polyline points="2 12 12 17 22 12"></polyline>
+  </symbol>
+
+  <!-- Curly braces with C - Class Methods section -->
+  <symbol
+    id="icon-class-methods"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M6 3C3.5 3 2 4.5 2 7v3c0 1.5-1 2-1 2s1 .5 1 2v5c0 2.5 1.5 4 4 4"></path>
+    <path d="M18 3c2.5 0 4 1.5 4 4v3c0 1.5 1 2 1 2s-1 .5-1 2v5c0 2.5-1.5 4-4 4"></path>
+
+    <text
+      x="12"
+      y="17"
+      text-anchor="middle"
+      font-size="13"
+      font-weight="bold"
+      fill="currentColor"
+      stroke="none"
+    >
+      C
+    </text>
+  </symbol>
+
+  <!-- Curly braces with I - Instance Methods section -->
+  <symbol
+    id="icon-instance-methods"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M6 3C3.5 3 2 4.5 2 7v3c0 1.5-1 2-1 2s1 .5 1 2v5c0 2.5 1.5 4 4 4"></path>
+    <path d="M18 3c2.5 0 4 1.5 4 4v3c0 1.5 1 2 1 2s-1 .5-1 2v5c0 2.5-1.5 4-4 4"></path>
+
+    <text
+      x="12"
+      y="17"
+      text-anchor="middle"
+      font-size="13"
+      font-weight="bold"
+      fill="currentColor"
+      stroke="none"
+    >
+      I
+    </text>
+  </symbol>
+
+  <!-- Double chevrons up - Ancestors section -->
+  <symbol
+    id="icon-ancestors"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <polyline points="17 11 12 6 7 11"></polyline>
+    <polyline points="17 18 12 13 7 18"></polyline>
+  </symbol>
+
+  <!-- User with plus - Included Modules section -->
+  <symbol
+    id="icon-includes"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+    <circle cx="8.5" cy="7" r="4"></circle>
+
+    <line
+      x1="20"
+      y1="8"
+      x2="20"
+      y2="14"
+    ></line>
+
+    <line
+      x1="23"
+      y1="11"
+      x2="17"
+      y2="11"
+    ></line>
+  </symbol>
+
+  <!-- User with check - Extended Modules section -->
+  <symbol
+    id="icon-extends"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+    <circle cx="8.5" cy="7" r="4"></circle>
+    <polyline points="17 11 19 13 23 9"></polyline>
+  </symbol>
+
+  <!-- List - Sections section -->
+  <symbol
+    id="icon-list"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <line
+      x1="8"
+      y1="6"
+      x2="21"
+      y2="6"
+    ></line>
+
+    <line
+      x1="8"
+      y1="12"
+      x2="21"
+      y2="12"
+    ></line>
+
+    <line
+      x1="8"
+      y1="18"
+      x2="21"
+      y2="18"
+    ></line>
+
+    <line
+      x1="3"
+      y1="6"
+      x2="3.01"
+      y2="6"
+    ></line>
+
+    <line
+      x1="3"
+      y1="12"
+      x2="3.01"
+      y2="12"
+    ></line>
+
+    <line
+      x1="3"
+      y1="18"
+      x2="3.01"
+      y2="18"
+    ></line>
+  </symbol>
+</svg>
+
+<header class="top-navbar">
+  <a href="../index.html" class="navbar-brand">
+    RDoc Documentation
+  </a>
+
+  <!-- Desktop search bar -->
+  <div class="navbar-search navbar-search-desktop" role="search">
+    <form action="#" method="get" accept-charset="utf-8">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results-desktop"
+             type="text" name="search" placeholder="Search (/) for a class, method..."
+             spellcheck="false" autocomplete="off"
+             title="Type to search, Up and Down to navigate, Enter to load">
+      <ul id="search-results-desktop" aria-label="Search Results"
+          aria-busy="false" aria-expanded="false"
+          aria-atomic="false" class="initially-hidden search-results"></ul>
+    </form>
+  </div>
+
+  <!-- Mobile search icon button -->
+  <button id="search-toggle" class="navbar-search-mobile" aria-label="Open search" type="button">
+    <span aria-hidden="true">🔍</span>
+  </button>
+
+  <!-- Theme toggle button -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" type="button">
+    <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
+  </button>
+</header>
+
+<!-- Search Modal (Mobile) -->
+<div id="search-modal" class="search-modal" hidden aria-modal="true" role="dialog" aria-label="Search">
+  <div class="search-modal-backdrop"></div>
+  <div class="search-modal-content">
+    <div class="search-modal-header">
+      <form class="search-modal-form" action="#" method="get" accept-charset="utf-8">
+        <span class="search-modal-icon" aria-hidden="true">🔍</span>
+        <input id="search-field-mobile" role="combobox" aria-label="Search"
+               aria-autocomplete="list" aria-controls="search-results-mobile"
+               type="text" name="search" placeholder="Search documentation"
+               spellcheck="false" autocomplete="off">
+        <button type="button" class="search-modal-close" aria-label="Close search" id="search-modal-close">
+          <span aria-hidden="true">esc</span>
+        </button>
+      </form>
+    </div>
+    <div class="search-modal-body">
+      <ul id="search-results-mobile" aria-label="Search Results"
+          aria-busy="false" aria-expanded="false"
+          aria-atomic="false" class="search-results search-modal-results initially-hidden"></ul>
+      <div class="search-modal-empty">
+        <p>No recent searches</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="navigation-toggle" role="button" tabindex="0" aria-label="Toggle sidebar" aria-expanded="true" aria-controls="navigation">
+  <span aria-hidden="true">&#9776;</span>
+</div>
+
+
+<nav id="navigation" role="navigation" hidden>
+  
+
+
+
+
+  <div id="fileindex-section" class="nav-section">
+    <details class="nav-section-collapsible" >
+      <summary class="nav-section-header">
+        <span class="nav-section-icon">
+          <svg>
+            <use href="#icon-file"></use>
+          </svg>
+        </span>
+
+        <span class="nav-section-title">Pages</span>
+
+        <span class="nav-section-chevron">
+          <svg>
+            <use href="#icon-chevron"></use>
+          </svg>
+        </span>
+      </summary>
+
+      <ul class="nav-list">
+
+
+
+
+
+
+            <li>
+              <a href="../CHANGELOG_md.html">
+                CHANGELOG
+              </a>
+            </li>
+
+
+
+
+            <li>
+              <a href="../Gemfile.html">
+                Gemfile
+              </a>
+            </li>
+
+
+
+
+            <li>
+              <a href="../Gemfile_lock.html">
+                Gemfile.lock
+              </a>
+            </li>
+
+
+
+
+            <li>
+              <a href="../LICENSE_txt.html">
+                LICENSE
+              </a>
+            </li>
+
+
+
+
+            <li>
+              <a href="../README_md.html">
+                README
+              </a>
+            </li>
+
+
+
+
+            <li>
+              <a href="../Rakefile.html">
+                Rakefile
+              </a>
+            </li>
+
+
+
+
+            <li>
+              <a href="../bin/setup.html">
+                setup
+              </a>
+            </li>
+
+
+
+
+            <li>
+              <a href="../sig/ftr_ruby_rbs.html">
+                ftr_ruby.rbs
+              </a>
+            </li>
+
+      </ul>
+    </details>
+  </div>
+
+
+  
+
+  
+<div id="parent-class-section" class="nav-section">
+  <details class="nav-section-collapsible" open>
+    <summary class="nav-section-header">
+      <span class="nav-section-icon">
+        <svg><use href="#icon-ancestors"></use></svg>
+      </span>
+      <span class="nav-section-title">Ancestors</span>
+      <span class="nav-section-chevron">
+        <svg><use href="#icon-chevron"></use></svg>
+      </span>
+    </summary>
+    <ul><li>Object</li></ul>
+  </details>
+</div>
+
+
+  
+
+  
+
+  
+  <div class="nav-section">
+    <details class="nav-section-collapsible" open>
+      <summary class="nav-section-header">
+        <span class="nav-section-icon">
+          <svg><use href="#icon-class-methods"></use></svg>
+        </span>
+        <span class="nav-section-title">Class Methods</span>
+        <span class="nav-section-chevron">
+          <svg><use href="#icon-chevron"></use></svg>
+        </span>
+      </summary>
+      <ul class="nav-list" role="directory">
+
+        <li ><a href="#method-c-new">new</a></li>
+
+      </ul>
+    </details>
+  </div>
+
+
+
+  <div class="nav-section">
+    <details class="nav-section-collapsible" open>
+      <summary class="nav-section-header">
+        <span class="nav-section-icon">
+          <svg><use href="#icon-instance-methods"></use></svg>
+        </span>
+        <span class="nav-section-title">Instance Methods</span>
+        <span class="nav-section-chevron">
+          <svg><use href="#icon-chevron"></use></svg>
+        </span>
+      </summary>
+      <ul class="nav-list" role="directory">
+
+        <li ><a href="#method-i-get_dcat">get_dcat</a></li>
+
+      </ul>
+    </details>
+  </div>
+
+
+  <div id="classindex-section" class="nav-section">
+  <details class="nav-section-collapsible" open>
+    <summary class="nav-section-header">
+      <span class="nav-section-icon">
+        <svg><use href="#icon-layers"></use></svg>
+      </span>
+      <span class="nav-section-title">Classes and Modules</span>
+      <span class="nav-section-chevron">
+        <svg><use href="#icon-chevron"></use></svg>
+      </span>
+    </summary>
+
+    <ul class="link-list nav-list"><li><details><summary><code><a href="../FtrRuby.html">FtrRuby</a></code></summary><ul class="link-list nav-list"><li><code><a href="../FtrRuby/DCAT_Record.html">DCAT_Record</a></code></li><li><code><a href="../FtrRuby/Error.html">Error</a></code></li><li><code><a href="../FtrRuby/FDPIndex.html">FDPIndex</a></code></li><li><code><a href="../FtrRuby/Output.html">Output</a></code></li><li><code><a href="../FtrRuby/TestInfra.html">TestInfra</a></code></li><li><code><a href="../FtrRuby/Tests.html">Tests</a></code></li></ul></details></li><li><code><a href="../OpenAPI.html">OpenAPI</a></code></li></ul>
+  </details>
+</div>
+
+</nav>
+
+<main role="main" aria-labelledby="class-ftrruby-dcat_record">
+  
+  
+    <ol role="navigation" aria-label="Breadcrumb navigation" class="breadcrumb">
+      
+      <li>
+        
+        <a href="../FtrRuby.html">FtrRuby</a><span>::</span>
+        
+      </li>
+      
+      <li>
+        
+        <span>DCAT_Record</span>
+        
+      </li>
+      
+    </ol>
+  
+
+  <span id="class-FtrRuby::DCAT_Record" class="legacy-anchor"></span>
+  <h1 id="class-ftrruby-dcat_record" class="anchor-link class">
+    class FtrRuby::DCAT_Record
+  </h1>
+
+  <section class="description">
+    
+<p>Represents a single FAIR Test as a DCAT-compliant DataService with additional FAIR-specific metadata.</p>
+
+<p>This class generates RDF metadata (in a DCAT + DQV + FTR vocabulary profile) describing a test that can be used to assess FAIR compliance of digital objects (typically datasets). The resulting graph follows the DCAT-AP style for Data Services, extended with FAIR Test Registry (FTR) semantics.</p>
+
+<span id="class-FtrRuby::DCAT_Record-label-Usage" class="legacy-anchor"></span>
+<h2 id="class-ftrruby-dcat_record-usage"><a href="#class-ftrruby-dcat_record-usage">Usage</a></h2>
+
+<pre class="ruby"><span class="ruby-identifier">meta</span> = {
+  <span class="ruby-value">testid:</span>        <span class="ruby-string">&quot;ftr-rda-f1-01m&quot;</span>,
+  <span class="ruby-value">testname:</span>      <span class="ruby-string">&quot;FAIR Test F1-01M: Persistent Identifier&quot;</span>,
+  <span class="ruby-value">description:</span>   <span class="ruby-string">&quot;Checks whether the digital object has a globally unique persistent identifier...&quot;</span>,
+  <span class="ruby-value">keywords:</span>      [<span class="ruby-string">&quot;FAIR&quot;</span>, <span class="ruby-string">&quot;persistent identifier&quot;</span>, <span class="ruby-string">&quot;F1&quot;</span>],
+  <span class="ruby-value">creator:</span>       <span class="ruby-string">&quot;https://orcid.org/0000-0001-2345-6789&quot;</span>,
+  <span class="ruby-value">indicators:</span>    [<span class="ruby-string">&quot;https://w3id.org/ftr/indicator/F1-01M&quot;</span>],
+  <span class="ruby-value">metric:</span>        <span class="ruby-string">&quot;https://w3id.org/ftr/metric/F1-01M&quot;</span>,
+  <span class="ruby-value">license:</span>       <span class="ruby-string">&quot;https://creativecommons.org/licenses/by/4.0/&quot;</span>,
+  <span class="ruby-value">testversion:</span>   <span class="ruby-string">&quot;1.0&quot;</span>,
+  <span class="ruby-comment"># ... other fields</span>
+}
+
+<span class="ruby-identifier">record</span> = <span class="ruby-constant">FtrRuby</span><span class="ruby-operator">::</span><span class="ruby-constant">DCAT_Record</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">meta:</span> <span class="ruby-identifier">meta</span>)
+<span class="ruby-identifier">graph</span>  = <span class="ruby-identifier">record</span>.<span class="ruby-identifier">get_dcat</span>
+</pre>
+
+  </section>
+
+
+  <span id="5Buntitled-5D" class="legacy-anchor"></span>
+  <section class="documentation-section anchor-link">
+
+
+
+
+
+
+
+    <section class="attribute-method-details method-section">
+      <header>
+        <h3 id="untitled-attributes"><a href="#untitled-attributes">Attributes</a></h3>
+      </header>
+
+
+      <div id="attribute-i-applicationarea" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-applicationarea" title="Link to this attribute">
+            <span class="method-name">applicationarea</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-basePath" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-basePath" title="Link to this attribute">
+            <span class="method-name">basePath</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-creator" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-creator" title="Link to this attribute">
+            <span class="method-name">creator</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-dctype" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-dctype" title="Link to this attribute">
+            <span class="method-name">dctype</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-description" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-description" title="Link to this attribute">
+            <span class="method-name">description</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-end_desc" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-end_desc" title="Link to this attribute">
+            <span class="method-name">end_desc</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-end_url" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-end_url" title="Link to this attribute">
+            <span class="method-name">end_url</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-host" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-host" title="Link to this attribute">
+            <span class="method-name">host</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-identifier" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-identifier" title="Link to this attribute">
+            <span class="method-name">identifier</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-implementations" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-implementations" title="Link to this attribute">
+            <span class="method-name">implementations</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-indicators" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-indicators" title="Link to this attribute">
+            <span class="method-name">indicators</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-individuals" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-individuals" title="Link to this attribute">
+            <span class="method-name">individuals</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-isapplicablefor" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-isapplicablefor" title="Link to this attribute">
+            <span class="method-name">isapplicablefor</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-keywords" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-keywords" title="Link to this attribute">
+            <span class="method-name">keywords</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-landingpage" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-landingpage" title="Link to this attribute">
+            <span class="method-name">landingpage</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-license" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-license" title="Link to this attribute">
+            <span class="method-name">license</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-metric" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-metric" title="Link to this attribute">
+            <span class="method-name">metric</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-organizations" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-organizations" title="Link to this attribute">
+            <span class="method-name">organizations</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-protocol" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-protocol" title="Link to this attribute">
+            <span class="method-name">protocol</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-supportedby" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-supportedby" title="Link to this attribute">
+            <span class="method-name">supportedby</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-testid" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-testid" title="Link to this attribute">
+            <span class="method-name">testid</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-testname" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-testname" title="Link to this attribute">
+            <span class="method-name">testname</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-testversion" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-testversion" title="Link to this attribute">
+            <span class="method-name">testversion</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+      <div id="attribute-i-themes" class="method-detail anchor-link">
+        <div class="method-heading attribute-method-heading">
+          <a href="#attribute-i-themes" title="Link to this attribute">
+            <span class="method-name">themes</span>
+            <span class="attribute-access-type">[RW]</span>
+          </a>
+        </div>
+
+        <div class="method-description">
+
+
+        
+
+        </div>
+      </div>
+
+    </section>
+
+
+
+
+
+
+     <section id="public-class-untitled-method-details" class="method-section anchor-link">
+       <header>
+         <h3 id="public-class-untitled-methods"><a href="#public-class-untitled-methods">Public Class Methods</a></h3>
+       </header>
+
+
+      <div id="method-c-new" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-c-new" title="Link to this method">
+                <span class="method-name">new</span>
+                <span class="method-args">(meta:)</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="new-source">
+            <pre class="ruby"><span class="ruby-comment"># File lib/dcat_metadata.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-value">meta:</span>)
+  <span class="ruby-identifier">indics</span> = [<span class="ruby-identifier">meta</span>[<span class="ruby-value">:indicators</span>]] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">meta</span>[<span class="ruby-value">:indicators</span>].<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Array</span>
+  <span class="ruby-ivar">@indicators</span> = <span class="ruby-identifier">indics</span>
+  <span class="ruby-ivar">@testid</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:testid</span>]
+  <span class="ruby-ivar">@testname</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:testname</span>]
+  <span class="ruby-ivar">@metric</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:metric</span>]
+  <span class="ruby-ivar">@description</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:description</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&quot;No description provided&quot;</span>
+  <span class="ruby-ivar">@keywords</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:keywords</span>] <span class="ruby-operator">||</span> []
+  <span class="ruby-ivar">@keywords</span> = [<span class="ruby-ivar">@keywords</span>] <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@keywords</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Array</span>
+  <span class="ruby-ivar">@creator</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:creator</span>]
+  <span class="ruby-ivar">@end_desc</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:end_desc</span>]
+  <span class="ruby-ivar">@end_url</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:end_url</span>]
+  <span class="ruby-ivar">@dctype</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:dctype</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&quot;http://edamontology.org/operation_2428&quot;</span>
+  <span class="ruby-ivar">@supportedby</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:supportedby</span>] <span class="ruby-operator">||</span> [<span class="ruby-string">&quot;https://tools.ostrails.eu/champion&quot;</span>]
+  <span class="ruby-ivar">@applicationarea</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:applicationarea</span>] <span class="ruby-operator">||</span> [<span class="ruby-string">&quot;http://www.fairsharing.org/ontology/subject/SRAO_0000401&quot;</span>]
+  <span class="ruby-ivar">@isapplicablefor</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:isapplicablefor</span>] <span class="ruby-operator">||</span> [<span class="ruby-string">&quot;https://schema.org/Dataset&quot;</span>]
+  <span class="ruby-ivar">@landingpage</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:landingPage</span>] <span class="ruby-operator">||</span> <span class="ruby-ivar">@end_url</span>
+  <span class="ruby-ivar">@license</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:license</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&quot;No License&quot;</span>
+  <span class="ruby-ivar">@themes</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:themes</span>] <span class="ruby-operator">||</span> []
+  <span class="ruby-ivar">@themes</span> = [<span class="ruby-ivar">@themes</span>] <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@themes</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Array</span>
+  <span class="ruby-ivar">@testversion</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:testversion</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&quot;unversioned&quot;</span>
+  <span class="ruby-ivar">@organizations</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:organizations</span>] <span class="ruby-operator">||</span> []
+  <span class="ruby-ivar">@individuals</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:individuals</span>] <span class="ruby-operator">||</span> []
+  <span class="ruby-ivar">@protocol</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:protocol</span>]
+  <span class="ruby-ivar">@host</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:host</span>]
+  <span class="ruby-ivar">@basePath</span> = <span class="ruby-identifier">meta</span>[<span class="ruby-value">:basePath</span>]
+  <span class="ruby-identifier">cleanhost</span> = <span class="ruby-ivar">@host</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-string">&quot;/&quot;</span>, <span class="ruby-string">&quot;&quot;</span>)
+  <span class="ruby-identifier">cleanpath</span> = <span class="ruby-ivar">@basePath</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-string">&quot;/&quot;</span>, <span class="ruby-string">&quot;&quot;</span>) <span class="ruby-comment"># TODO: this needs to check only leading and trailing!  NOt internal...</span>
+  <span class="ruby-identifier">endpointpath</span> = <span class="ruby-string">&quot;assess/test&quot;</span>
+  <span class="ruby-ivar">@end_url</span> = <span class="ruby-node">&quot;#{protocol}://#{cleanhost}/#{cleanpath}/#{endpointpath}/#{testid}&quot;</span>
+  <span class="ruby-ivar">@end_desc</span> = <span class="ruby-node">&quot;#{protocol}://#{cleanhost}/#{cleanpath}/#{testid}/api&quot;</span>
+  <span class="ruby-ivar">@identifier</span> = <span class="ruby-node">&quot;#{protocol}://#{cleanhost}/#{cleanpath}/#{testid}&quot;</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@testid</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@testname</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@description</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@creator</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@end_desc</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@end_url</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@protocol</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@host</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@basePath</span>
+    <span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;this record is invalid - it is missing one of  testid testname description creator  end_desc end_url protocol  host  basePath&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>Creates a new <a href="DCAT_Record.html"><code>DCAT_Record</code></a> from metadata hash.</p>
+
+<p>@param meta [Hash] Metadata describing the FAIR test. @option meta [String] :testid           Unique identifier for the test (used in URLs) @option meta [String] :testname         Human-readable name/title of the test @option meta [String] :description      Detailed description of what the test does @option meta [String, Array&lt;String&gt;] :keywords   Keywords describing the test @option meta [String] :creator          URI or literal identifying the creator @option meta [String, Array&lt;String&gt;] :indicators  URIs of the FAIR indicators this test addresses @option meta [String] :metric           URI of the metric this test implements @option meta [String] :license          License URI for the test @option meta [String, Array&lt;String&gt;] :themes     Thematic categories (DCAT themes) @option meta [String] :testversion      Version of the test @option meta [Array&lt;Hash&gt;] :individuals List of contact individuals (name, email) @option meta [Array&lt;Hash&gt;] :organizations List of responsible organizations (name, url) @option meta [String] :protocol         Protocol (http/https) @option meta [String] :host             Hostname of the test service @option meta [String] :basePath         Base path of the test service</p>
+
+<p>@note Several fields have sensible defaults (e.g. <code>dctype</code>, <code>supportedby</code>, <code>applicationarea</code>).</p>
+
+<pre>The +end_url+ and +identifier+ are automatically constructed from +protocol+, +host+,
++basePath+, and +testid+.</pre>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+    </section>
+
+
+
+
+
+
+
+     <section id="public-instance-untitled-method-details" class="method-section anchor-link">
+       <header>
+         <h3 id="public-instance-untitled-methods"><a href="#public-instance-untitled-methods">Public Instance Methods</a></h3>
+       </header>
+
+
+      <div id="method-i-get_dcat" class="method-detail anchor-link ">
+        <div class="method-header">
+
+            <div class="method-heading">
+              <a href="#method-i-get_dcat" title="Link to this method">
+                <span class="method-name">get_dcat</span>
+                <span class="method-args">()</span>
+              </a>
+            </div>
+
+        </div>
+
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+          <div class="method-source-code" id="get_dcat-source">
+            <pre class="ruby"><span class="ruby-comment"># File lib/dcat_metadata.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_dcat</span>
+  <span class="ruby-identifier">schema</span> = <span class="ruby-constant">RDF</span><span class="ruby-operator">::</span><span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">SCHEMA</span>
+  <span class="ruby-identifier">dcterms</span> = <span class="ruby-constant">RDF</span><span class="ruby-operator">::</span><span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">DC</span>
+  <span class="ruby-identifier">xsd</span> = <span class="ruby-constant">RDF</span><span class="ruby-operator">::</span><span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">XSD</span>
+  <span class="ruby-identifier">dcat</span> = <span class="ruby-constant">RDF</span><span class="ruby-operator">::</span><span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">DCAT</span>
+  <span class="ruby-identifier">sio</span> = <span class="ruby-constant">RDF</span><span class="ruby-operator">::</span><span class="ruby-constant">Vocabulary</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;http://semanticscience.org/resource/&quot;</span>)
+  <span class="ruby-identifier">ftr</span> = <span class="ruby-constant">RDF</span><span class="ruby-operator">::</span><span class="ruby-constant">Vocabulary</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;https://w3id.org/ftr#&quot;</span>)
+  <span class="ruby-identifier">dqv</span> = <span class="ruby-constant">RDF</span><span class="ruby-operator">::</span><span class="ruby-constant">Vocabulary</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;http://www.w3.org/ns/dqv#&quot;</span>)
+  <span class="ruby-identifier">vcard</span> = <span class="ruby-constant">RDF</span><span class="ruby-operator">::</span><span class="ruby-constant">Vocabulary</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;http://www.w3.org/2006/vcard/ns#&quot;</span>)
+  <span class="ruby-identifier">dpv</span> = <span class="ruby-constant">RDF</span><span class="ruby-operator">::</span><span class="ruby-constant">Vocabulary</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;https://w3id.org/dpv#&quot;</span>)
+
+  <span class="ruby-identifier">g</span> = <span class="ruby-constant">RDF</span><span class="ruby-operator">::</span><span class="ruby-constant">Graph</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-comment">#      me = &quot;#{identifier}/about&quot;   # at the hackathon we decided that the test id would return the metadata</span>
+  <span class="ruby-comment"># so now there is no need for /about</span>
+  <span class="ruby-identifier">me</span> = <span class="ruby-node">&quot;#{identifier}&quot;</span>
+
+  <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-constant">RDF</span>.<span class="ruby-identifier">type</span>, <span class="ruby-identifier">dcat</span>.<span class="ruby-constant">DataService</span>, <span class="ruby-identifier">g</span>)
+  <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-constant">RDF</span>.<span class="ruby-identifier">type</span>, <span class="ruby-identifier">ftr</span>.<span class="ruby-constant">Test</span>, <span class="ruby-identifier">g</span>)
+
+  <span class="ruby-comment"># triplify tests and rejects anything that is empty or nil  --&gt; SAFE</span>
+  <span class="ruby-comment"># Test Unique Identifier  dcterms:identifier       Literal</span>
+  <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-identifier">dcterms</span>.<span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">g</span>, <span class="ruby-value">datatype:</span> <span class="ruby-identifier">xsd</span>.<span class="ruby-identifier">string</span>)
+
+  <span class="ruby-comment"># Title/Name of the test  dcterms:title    Literal</span>
+  <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-identifier">dcterms</span>.<span class="ruby-identifier">title</span>, <span class="ruby-identifier">testname</span>, <span class="ruby-identifier">g</span>)
+
+  <span class="ruby-comment"># Description     dcterms:description Literal</span>
+  <span class="ruby-comment"># descriptions.each do |d|</span>
+  <span class="ruby-comment">#   triplify(me, dcterms.description, d, g)</span>
+  <span class="ruby-comment"># end</span>
+  <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-identifier">dcterms</span>.<span class="ruby-identifier">description</span>, <span class="ruby-identifier">description</span>, <span class="ruby-identifier">g</span>)
+
+  <span class="ruby-comment"># Keywords        dcat:keyword   Literal</span>
+  <span class="ruby-identifier">keywords</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">kw</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-identifier">dcat</span>.<span class="ruby-identifier">keyword</span>, <span class="ruby-identifier">kw</span>, <span class="ruby-identifier">g</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Test creator    dcterms:creator    dcat:Agent (URI)</span>
+  <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-identifier">dcterms</span>.<span class="ruby-identifier">creator</span>, <span class="ruby-identifier">creator</span>, <span class="ruby-identifier">g</span>)
+
+  <span class="ruby-comment"># Dimension       ftr:indicator</span>
+  <span class="ruby-identifier">indicators</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ind</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-identifier">dqv</span>.<span class="ruby-identifier">inDimension</span>, <span class="ruby-identifier">ind</span>, <span class="ruby-identifier">g</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># API description dcat:endpointDescription        rdfs:Resource</span>
+  <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-identifier">dcat</span>.<span class="ruby-identifier">endpointDescription</span>, <span class="ruby-identifier">end_desc</span>, <span class="ruby-identifier">g</span>)
+
+  <span class="ruby-comment"># API URL dcat:endpointURL        rdfs:Resource</span>
+  <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-identifier">dcat</span>.<span class="ruby-identifier">endpointURL</span>, <span class="ruby-identifier">end_url</span>, <span class="ruby-identifier">g</span>)
+
+  <span class="ruby-comment"># API URL dcat:landingPage        rdfs:Resource</span>
+  <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-identifier">dcat</span>.<span class="ruby-identifier">landingPage</span>, <span class="ruby-identifier">landingpage</span>, <span class="ruby-identifier">g</span>)
+
+  <span class="ruby-comment"># Source of the test      codemeta:hasSourceCode/schema:codeRepository/ doap:repository        schema:SoftwareSourceCode/URL</span>
+  <span class="ruby-comment"># TODO</span>
+  <span class="ruby-comment"># FAIRChampion::Output.triplify(me, dcat.endpointDescription, end_desc, g)</span>
+
+  <span class="ruby-comment"># Functional Descriptor/Operation dcterms:type    xsd:anyURI</span>
+  <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-identifier">dcterms</span>.<span class="ruby-identifier">type</span>, <span class="ruby-identifier">dctype</span>, <span class="ruby-identifier">g</span>)
+
+  <span class="ruby-comment"># License dcterms:license xsd:anyURI</span>
+  <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-identifier">dcterms</span>.<span class="ruby-identifier">license</span>, <span class="ruby-identifier">license</span>, <span class="ruby-identifier">g</span>)
+
+  <span class="ruby-comment"># Semantic Annotation     dcat:theme  xsd:anyURI</span>
+  <span class="ruby-identifier">themes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">theme</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-identifier">dcat</span>.<span class="ruby-identifier">theme</span>, <span class="ruby-identifier">theme</span>, <span class="ruby-identifier">g</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Version dcat:version    rdfs:Literal</span>
+  <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-constant">RDF</span><span class="ruby-operator">::</span><span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">DCAT</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;version&quot;</span>, <span class="ruby-identifier">testversion</span>, <span class="ruby-identifier">g</span>)
+
+  <span class="ruby-comment"># # Version notes adms:versionNotes       rdfs:Literal</span>
+  <span class="ruby-comment"># FAIRChampion::Output.triplify(me, dcat.version, version, g)</span>
+
+  <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-identifier">sio</span>[<span class="ruby-string">&quot;SIO_000233&quot;</span>], <span class="ruby-identifier">metric</span>, <span class="ruby-identifier">g</span>) <span class="ruby-comment"># is implementation of</span>
+  <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">metric</span>, <span class="ruby-constant">RDF</span>.<span class="ruby-identifier">type</span>, <span class="ruby-identifier">dqv</span>.<span class="ruby-constant">Metric</span>, <span class="ruby-identifier">g</span>) <span class="ruby-comment"># is implementation of</span>
+
+  <span class="ruby-comment"># Responsible     dcat:contactPoint   dcat:Kind (includes Individual/Organization)</span>
+  <span class="ruby-identifier">individuals</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-comment"># i = {name: &quot;Mark WAilkkinson&quot;, &quot;email&quot;: &quot;asmlkfj;askjf@a;lksdjfas&quot;}</span>
+    <span class="ruby-identifier">guid</span> = <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">uuid</span>
+    <span class="ruby-identifier">cp</span> = <span class="ruby-node">&quot;urn:fairchampion:testmetadata:individual#{guid}&quot;</span>
+    <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-identifier">dcat</span>.<span class="ruby-identifier">contactPoint</span>, <span class="ruby-identifier">cp</span>, <span class="ruby-identifier">g</span>)
+    <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">cp</span>, <span class="ruby-constant">RDF</span>.<span class="ruby-identifier">type</span>, <span class="ruby-identifier">vcard</span>.<span class="ruby-constant">Individual</span>, <span class="ruby-identifier">g</span>)
+    <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">cp</span>, <span class="ruby-identifier">vcard</span>.<span class="ruby-identifier">fn</span>, <span class="ruby-identifier">i</span>[<span class="ruby-string">&quot;name&quot;</span>], <span class="ruby-identifier">g</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span>[<span class="ruby-string">&quot;name&quot;</span>]
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">i</span>[<span class="ruby-string">&quot;email&quot;</span>]
+
+    <span class="ruby-identifier">email</span> = <span class="ruby-identifier">i</span>[<span class="ruby-string">&quot;email&quot;</span>].<span class="ruby-identifier">to_s</span>
+    <span class="ruby-identifier">email</span> = <span class="ruby-node">&quot;mailto:#{email}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">email</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/mailto:/</span>
+    <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">cp</span>, <span class="ruby-identifier">vcard</span>.<span class="ruby-identifier">hasEmail</span>, <span class="ruby-constant">RDF</span><span class="ruby-operator">::</span><span class="ruby-constant">URI</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">email</span>), <span class="ruby-identifier">g</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">organizations</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span>
+    <span class="ruby-comment"># i = {name: &quot;CBGP&quot;, &quot;url&quot;: &quot;https://dbdsf.orhf&quot;}</span>
+    <span class="ruby-identifier">guid</span> = <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">uuid</span>
+    <span class="ruby-identifier">cp</span> = <span class="ruby-node">&quot;urn:fairchampion:testmetadata:org:#{guid}&quot;</span>
+    <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-identifier">dcat</span>.<span class="ruby-identifier">contactPoint</span>, <span class="ruby-identifier">cp</span>, <span class="ruby-identifier">g</span>)
+    <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">cp</span>, <span class="ruby-constant">RDF</span>.<span class="ruby-identifier">type</span>, <span class="ruby-identifier">vcard</span>.<span class="ruby-constant">Organization</span>, <span class="ruby-identifier">g</span>)
+    <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">cp</span>, <span class="ruby-identifier">vcard</span>[<span class="ruby-string">&quot;organization-name&quot;</span>], <span class="ruby-identifier">o</span>[<span class="ruby-string">&quot;name&quot;</span>], <span class="ruby-identifier">g</span>)
+    <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">cp</span>, <span class="ruby-identifier">vcard</span>.<span class="ruby-identifier">url</span>, <span class="ruby-constant">RDF</span><span class="ruby-operator">::</span><span class="ruby-constant">URI</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">o</span>[<span class="ruby-string">&quot;url&quot;</span>].<span class="ruby-identifier">to_s</span>), <span class="ruby-identifier">g</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">supportedby</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">tool</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-identifier">ftr</span>.<span class="ruby-identifier">supportedBy</span>, <span class="ruby-identifier">tool</span>, <span class="ruby-identifier">g</span>)
+    <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">tool</span>, <span class="ruby-constant">RDF</span>.<span class="ruby-identifier">type</span>, <span class="ruby-identifier">schema</span>.<span class="ruby-constant">SoftwareApplication</span>, <span class="ruby-identifier">g</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">applicationarea</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">domain</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-identifier">ftr</span>.<span class="ruby-identifier">applicationArea</span>, <span class="ruby-identifier">domain</span>, <span class="ruby-identifier">g</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">isapplicablefor</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">digitalo</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">triplify</span>(<span class="ruby-identifier">me</span>, <span class="ruby-identifier">dpv</span>.<span class="ruby-identifier">isApplicableFor</span>, <span class="ruby-identifier">digitalo</span>, <span class="ruby-identifier">g</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">g</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+
+
+
+        <div class="method-description">
+
+
+          <p>Returns an RDF::Graph containing the DCAT metadata for this test.</p>
+
+<p>The graph describes the test as both a <code>dcat:DataService</code> and an <code>ftr:Test</code>. It includes:</p>
+<ul><li>
+<p>Core DCAT properties (identifier, title, description, keywords, landing page, etc.)</p>
+</li><li>
+<p>FAIR-specific extensions via the FTR vocabulary</p>
+</li><li>
+<p>Contact points (individuals and organizations) using vCard</p>
+</li><li>
+<p>Link to the metric it implements (SIO)</p>
+</li><li>
+<p>Supported-by relationships, application areas, and applicability statements</p>
+</li></ul>
+
+<p>@return [RDF::Graph] RDF graph with the complete DCAT record</p>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+    </section>
+
+
+
+
+  </section>
+
+</main>
+
+<aside class="table-of-contents" role="complementary" aria-label="Table of Contents">
+  <div class="toc-sticky">
+    <h3 class="toc-heading">On This Page</h3>
+    <nav class="toc-nav" id="toc-nav" aria-label="Page sections">
+      <!-- Generated by JavaScript based on page headings -->
+    </nav>
+  </div>
+</aside>
+
+
+<footer class="site-footer">
+  
+
+  <div class="footer-bottom">
+    <p>
+      Generated by <a href="https://ruby.github.io/rdoc/">RDoc 7.2.0</a>
+      using the Aliki theme by <a href="http://st0012.dev">Stan Lo</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+

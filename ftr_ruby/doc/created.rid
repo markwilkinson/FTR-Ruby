@@ -1,0 +1,19 @@
+Sat, 28 Mar 2026 10:43:18 +0100
+/home/osboxes/CODE/FTR-Ruby/ftr_ruby/CHANGELOG.md	Sat, 28 Mar 2026 06:58:00 +0100
+/home/osboxes/CODE/FTR-Ruby/ftr_ruby/Gemfile	Sat, 28 Mar 2026 10:21:23 +0100
+/home/osboxes/CODE/FTR-Ruby/ftr_ruby/Gemfile.lock	Sat, 28 Mar 2026 10:21:30 +0100
+/home/osboxes/CODE/FTR-Ruby/ftr_ruby/LICENSE.txt	Sat, 28 Mar 2026 06:58:00 +0100
+/home/osboxes/CODE/FTR-Ruby/ftr_ruby/README.md	Sat, 28 Mar 2026 08:29:16 +0100
+/home/osboxes/CODE/FTR-Ruby/ftr_ruby/Rakefile	Sat, 28 Mar 2026 06:58:00 +0100
+/home/osboxes/CODE/FTR-Ruby/ftr_ruby/bin/console	Sat, 28 Mar 2026 06:58:00 +0100
+/home/osboxes/CODE/FTR-Ruby/ftr_ruby/bin/setup	Sat, 28 Mar 2026 06:58:00 +0100
+/home/osboxes/CODE/FTR-Ruby/ftr_ruby/ftr_ruby-0.1.0.gem	Sat, 28 Mar 2026 10:42:56 +0100
+/home/osboxes/CODE/FTR-Ruby/ftr_ruby/lib/dcat_metadata.rb	Sat, 28 Mar 2026 10:36:54 +0100
+/home/osboxes/CODE/FTR-Ruby/ftr_ruby/lib/fdp_index.rb	Sat, 28 Mar 2026 07:48:50 +0100
+/home/osboxes/CODE/FTR-Ruby/ftr_ruby/lib/ftr_ruby/version.rb	Sat, 28 Mar 2026 06:58:00 +0100
+/home/osboxes/CODE/FTR-Ruby/ftr_ruby/lib/ftr_ruby.rb	Sat, 28 Mar 2026 10:17:48 +0100
+/home/osboxes/CODE/FTR-Ruby/ftr_ruby/lib/openapi.rb	Sat, 28 Mar 2026 08:01:23 +0100
+/home/osboxes/CODE/FTR-Ruby/ftr_ruby/lib/output.rb	Sat, 28 Mar 2026 08:24:51 +0100
+/home/osboxes/CODE/FTR-Ruby/ftr_ruby/lib/registertest.rb	Sat, 28 Mar 2026 10:18:38 +0100
+/home/osboxes/CODE/FTR-Ruby/ftr_ruby/lib/test_infrastructure.rb	Sat, 28 Mar 2026 08:04:24 +0100
+/home/osboxes/CODE/FTR-Ruby/ftr_ruby/sig/ftr_ruby.rbs	Sat, 28 Mar 2026 06:58:00 +0100

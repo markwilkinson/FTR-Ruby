@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>README - RDoc Documentation</title>
+
+
+  <meta name="keywords" content="ruby,documentation,README">
+  <meta
+    name="description"
+    content="README: TestResult` with provenance) The library uses the **TripleEasy** mixin for easy RDF triple creation and produces graphs compatible with DCAT, DQV, PR"
+  >
+
+
+
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="README - RDoc Documentation">
+
+
+
+    <meta property="og:description" content="TestResult` with provenance) The library uses the **TripleEasy** mixin for easy RDF triple creation and produces graphs compatible with DCAT, DQV, PR">
+
+
+
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="README - RDoc Documentation">
+
+
+
+    <meta name="twitter:description" content="TestResult` with provenance) The library uses the **TripleEasy** mixin for easy RDF triple creation and produces graphs compatible with DCAT, DQV, PR">
+
+
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script
+  src="./js/theme-toggle.js?v=7.2.0"
+></script>
+
+<script
+  src="./js/search_navigation.js?v=7.2.0"
+  defer
+></script>
+
+<script
+  src="./js/search_data.js?v=7.2.0"
+  defer
+></script>
+
+<script
+  src="./js/search_ranker.js?v=7.2.0"
+  defer
+></script>
+
+<script
+  src="./js/search_controller.js?v=7.2.0"
+  defer
+></script>
+
+<script
+  src="./js/c_highlighter.js?v=7.2.0"
+  defer
+></script>
+
+<script
+  src="./js/bash_highlighter.js?v=7.2.0"
+  defer
+></script>
+
+<script
+  src="./js/aliki.js?v=7.2.0"
+  defer
+></script>
+
+<link
+  href="./css/rdoc.css?v=7.2.0"
+  rel="stylesheet"
+>
+
+
+
+
+<body role="document" class="file has-toc">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <!-- Chevron (right arrow) - used for expand/collapse -->
+  <symbol
+    id="icon-chevron"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </symbol>
+
+  <!-- File/Document - Pages section -->
+  <symbol
+    id="icon-file"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path
+      d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"
+    ></path>
+
+    <polyline points="14 2 14 8 20 8"></polyline>
+  </symbol>
+
+  <!-- Layers/Stack - Classes and Modules section -->
+  <symbol
+    id="icon-layers"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+    <polyline points="2 17 12 22 22 17"></polyline>
+    <polyline points="2 12 12 17 22 12"></polyline>
+  </symbol>
+
+  <!-- Curly braces with C - Class Methods section -->
+  <symbol
+    id="icon-class-methods"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M6 3C3.5 3 2 4.5 2 7v3c0 1.5-1 2-1 2s1 .5 1 2v5c0 2.5 1.5 4 4 4"></path>
+    <path d="M18 3c2.5 0 4 1.5 4 4v3c0 1.5 1 2 1 2s-1 .5-1 2v5c0 2.5-1.5 4-4 4"></path>
+
+    <text
+      x="12"
+      y="17"
+      text-anchor="middle"
+      font-size="13"
+      font-weight="bold"
+      fill="currentColor"
+      stroke="none"
+    >
+      C
+    </text>
+  </symbol>
+
+  <!-- Curly braces with I - Instance Methods section -->
+  <symbol
+    id="icon-instance-methods"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M6 3C3.5 3 2 4.5 2 7v3c0 1.5-1 2-1 2s1 .5 1 2v5c0 2.5 1.5 4 4 4"></path>
+    <path d="M18 3c2.5 0 4 1.5 4 4v3c0 1.5 1 2 1 2s-1 .5-1 2v5c0 2.5-1.5 4-4 4"></path>
+
+    <text
+      x="12"
+      y="17"
+      text-anchor="middle"
+      font-size="13"
+      font-weight="bold"
+      fill="currentColor"
+      stroke="none"
+    >
+      I
+    </text>
+  </symbol>
+
+  <!-- Double chevrons up - Ancestors section -->
+  <symbol
+    id="icon-ancestors"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <polyline points="17 11 12 6 7 11"></polyline>
+    <polyline points="17 18 12 13 7 18"></polyline>
+  </symbol>
+
+  <!-- User with plus - Included Modules section -->
+  <symbol
+    id="icon-includes"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+    <circle cx="8.5" cy="7" r="4"></circle>
+
+    <line
+      x1="20"
+      y1="8"
+      x2="20"
+      y2="14"
+    ></line>
+
+    <line
+      x1="23"
+      y1="11"
+      x2="17"
+      y2="11"
+    ></line>
+  </symbol>
+
+  <!-- User with check - Extended Modules section -->
+  <symbol
+    id="icon-extends"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+    <circle cx="8.5" cy="7" r="4"></circle>
+    <polyline points="17 11 19 13 23 9"></polyline>
+  </symbol>
+
+  <!-- List - Sections section -->
+  <symbol
+    id="icon-list"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <line
+      x1="8"
+      y1="6"
+      x2="21"
+      y2="6"
+    ></line>
+
+    <line
+      x1="8"
+      y1="12"
+      x2="21"
+      y2="12"
+    ></line>
+
+    <line
+      x1="8"
+      y1="18"
+      x2="21"
+      y2="18"
+    ></line>
+
+    <line
+      x1="3"
+      y1="6"
+      x2="3.01"
+      y2="6"
+    ></line>
+
+    <line
+      x1="3"
+      y1="12"
+      x2="3.01"
+      y2="12"
+    ></line>
+
+    <line
+      x1="3"
+      y1="18"
+      x2="3.01"
+      y2="18"
+    ></line>
+  </symbol>
+</svg>
+
+<header class="top-navbar">
+  <a href="./index.html" class="navbar-brand">
+    RDoc Documentation
+  </a>
+
+  <!-- Desktop search bar -->
+  <div class="navbar-search navbar-search-desktop" role="search">
+    <form action="#" method="get" accept-charset="utf-8">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results-desktop"
+             type="text" name="search" placeholder="Search (/) for a class, method..."
+             spellcheck="false" autocomplete="off"
+             title="Type to search, Up and Down to navigate, Enter to load">
+      <ul id="search-results-desktop" aria-label="Search Results"
+          aria-busy="false" aria-expanded="false"
+          aria-atomic="false" class="initially-hidden search-results"></ul>
+    </form>
+  </div>
+
+  <!-- Mobile search icon button -->
+  <button id="search-toggle" class="navbar-search-mobile" aria-label="Open search" type="button">
+    <span aria-hidden="true">🔍</span>
+  </button>
+
+  <!-- Theme toggle button -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" type="button">
+    <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
+  </button>
+</header>
+
+<!-- Search Modal (Mobile) -->
+<div id="search-modal" class="search-modal" hidden aria-modal="true" role="dialog" aria-label="Search">
+  <div class="search-modal-backdrop"></div>
+  <div class="search-modal-content">
+    <div class="search-modal-header">
+      <form class="search-modal-form" action="#" method="get" accept-charset="utf-8">
+        <span class="search-modal-icon" aria-hidden="true">🔍</span>
+        <input id="search-field-mobile" role="combobox" aria-label="Search"
+               aria-autocomplete="list" aria-controls="search-results-mobile"
+               type="text" name="search" placeholder="Search documentation"
+               spellcheck="false" autocomplete="off">
+        <button type="button" class="search-modal-close" aria-label="Close search" id="search-modal-close">
+          <span aria-hidden="true">esc</span>
+        </button>
+      </form>
+    </div>
+    <div class="search-modal-body">
+      <ul id="search-results-mobile" aria-label="Search Results"
+          aria-busy="false" aria-expanded="false"
+          aria-atomic="false" class="search-results search-modal-results initially-hidden"></ul>
+      <div class="search-modal-empty">
+        <p>No recent searches</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="navigation-toggle" role="button" tabindex="0" aria-label="Toggle sidebar" aria-expanded="true" aria-controls="navigation">
+  <span aria-hidden="true">&#9776;</span>
+</div>
+
+
+<nav id="navigation" role="navigation" hidden>
+  
+
+
+
+
+
+
+  <div id="fileindex-section" class="nav-section">
+    <details class="nav-section-collapsible" open>
+      <summary class="nav-section-header">
+        <span class="nav-section-icon">
+          <svg>
+            <use href="#icon-file"></use>
+          </svg>
+        </span>
+
+        <span class="nav-section-title">Pages</span>
+
+        <span class="nav-section-chevron">
+          <svg>
+            <use href="#icon-chevron"></use>
+          </svg>
+        </span>
+      </summary>
+
+      <ul class="nav-list">
+
+
+
+
+
+
+            <li>
+              <a href="./CHANGELOG_md.html">
+                CHANGELOG
+              </a>
+            </li>
+
+
+
+
+            <li>
+              <a href="./Gemfile.html">
+                Gemfile
+              </a>
+            </li>
+
+
+
+
+            <li>
+              <a href="./Gemfile_lock.html">
+                Gemfile.lock
+              </a>
+            </li>
+
+
+
+
+            <li>
+              <a href="./LICENSE_txt.html">
+                LICENSE
+              </a>
+            </li>
+
+
+
+
+            <li>
+              <a href="./README_md.html">
+                README
+              </a>
+            </li>
+
+
+
+
+            <li>
+              <a href="./Rakefile.html">
+                Rakefile
+              </a>
+            </li>
+
+
+
+
+            <li>
+              <a href="./bin/setup.html">
+                setup
+              </a>
+            </li>
+
+
+
+
+            <li>
+              <a href="./sig/ftr_ruby_rbs.html">
+                ftr_ruby.rbs
+              </a>
+            </li>
+
+      </ul>
+    </details>
+  </div>
+
+
+  <div id="classindex-section" class="nav-section">
+  <details class="nav-section-collapsible" open>
+    <summary class="nav-section-header">
+      <span class="nav-section-icon">
+        <svg><use href="#icon-layers"></use></svg>
+      </span>
+      <span class="nav-section-title">Classes and Modules</span>
+      <span class="nav-section-chevron">
+        <svg><use href="#icon-chevron"></use></svg>
+      </span>
+    </summary>
+
+    <ul class="link-list nav-list"><li><details><summary><code><a href="./FtrRuby.html">FtrRuby</a></code></summary><ul class="link-list nav-list"><li><code><a href="./FtrRuby/DCAT_Record.html">DCAT_Record</a></code></li><li><code><a href="./FtrRuby/Error.html">Error</a></code></li><li><code><a href="./FtrRuby/FDPIndex.html">FDPIndex</a></code></li><li><code><a href="./FtrRuby/Output.html">Output</a></code></li><li><code><a href="./FtrRuby/TestInfra.html">TestInfra</a></code></li><li><code><a href="./FtrRuby/Tests.html">Tests</a></code></li></ul></details></li><li><code><a href="./OpenAPI.html">OpenAPI</a></code></li></ul>
+  </details>
+</div>
+
+</nav>
+
+<main role="main" aria-label="Page README.md">
+
+<span id="label-FtrRuby" class="legacy-anchor"></span>
+<h1 id="ftrruby"><a href="#ftrruby"><a href="FtrRuby.html"><code>FtrRuby</code></a></a></h1>
+
+<p><strong>Ruby library for generating DCAT-compliant metadata and FAIR test outputs following the FTR Vocabulary</strong></p>
+
+<p><a href="FtrRuby.html"><code>FtrRuby</code></a> provides two main classes for working with FAIR Tests in Ruby:</p>
+<ul><li>
+<p><code>DCAT_Record</code> – Creates rich DCAT metadata describing a FAIR Test (as a <code>dcat:DataService</code> + <code>ftr:Test</code>)</p>
+</li><li>
+<p><code>Output</code> – Generates a standardized FAIR test execution result (as a <code>ftr:TestResult</code> with provenance)</p>
+</li></ul>
+
+<p>The library uses the <strong>TripleEasy</strong> mixin for easy RDF triple creation and produces graphs compatible with DCAT, DQV, PROV, and the <strong>FAIR Test Registry (FTR)</strong> vocabulary.</p>
+<hr>
+
+<span id="label-Features" class="legacy-anchor"></span>
+<h2 id="features"><a href="#features">Features</a></h2>
+<ul><li>
+<p>Full DCAT 2 metadata generation for FAIR Tests</p>
+</li><li>
+<p>Standardized test result output with provenance (<code>prov:wasGeneratedBy</code>, <code>ftr:TestResult</code>, etc.)</p>
+</li><li>
+<p>Automatic URL construction for test endpoints and identifiers</p>
+</li><li>
+<p>Support for contact points, indicators, metrics, themes, and guidance</p>
+</li><li>
+<p>JSON-LD output for easy consumption by registries and portals</p>
+</li><li>
+<p>Ready for use in FAIR assessment platforms, OSTrails, and EOSC services</p>
+</li></ul>
+<hr>
+
+<span id="label-Installation" class="legacy-anchor"></span>
+<h2 id="installation"><a href="#installation">Installation</a></h2>
+
+<p>If published as a gem:</p>
+
+<pre class="ruby"><span class="ruby-identifier">gem</span> <span class="ruby-string">&#39;ftr_ruby&#39;</span>
+</pre>
+
+<p>Or install manually:</p>
+
+<pre class="bash">gem install ftr_ruby</pre>
+
+<p>For local development:</p>
+
+<pre class="ruby"><span class="ruby-identifier">require_relative</span> <span class="ruby-string">&#39;lib/ftr_ruby&#39;</span>
+</pre>
+<hr>
+
+<span id="label-Usage" class="legacy-anchor"></span>
+<h2 id="usage"><a href="#usage">Usage</a></h2>
+
+<span id="label-1.+Documenting+a+FAIR+Test+-28DCAT_Record-29" class="legacy-anchor"></span>
+<h3 id="1-documenting-a-fair-test-dcatrecord"><a href="#1-documenting-a-fair-test-dcatrecord">1. Documenting a FAIR Test (<code>DCAT_Record</code>)</a></h3>
+
+<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&#39;ftr_ruby&#39;</span>
+
+<span class="ruby-identifier">meta</span> = {
+  <span class="ruby-value">testid:</span>        <span class="ruby-string">&quot;ftr-rda-f1-01m&quot;</span>,
+  <span class="ruby-value">testname:</span>      <span class="ruby-string">&quot;FAIR Test F1-01M: Globally Unique Persistent Identifier&quot;</span>,
+  <span class="ruby-value">description:</span>   <span class="ruby-string">&quot;This test checks whether a digital object is identified by a globally unique persistent identifier.&quot;</span>,
+  <span class="ruby-value">keywords:</span>      [<span class="ruby-string">&quot;FAIR&quot;</span>, <span class="ruby-string">&quot;F1&quot;</span>, <span class="ruby-string">&quot;persistent identifier&quot;</span>, <span class="ruby-string">&quot;PID&quot;</span>],
+  <span class="ruby-value">creator:</span>       <span class="ruby-string">&quot;https://orcid.org/0000-0001-2345-6789&quot;</span>,
+  <span class="ruby-value">indicators:</span>    [<span class="ruby-string">&quot;https://w3id.org/ftr/indicator/F1-01M&quot;</span>],
+  <span class="ruby-value">metric:</span>        <span class="ruby-string">&quot;https://w3id.org/ftr/metric/F1-01M&quot;</span>,
+  <span class="ruby-value">license:</span>       <span class="ruby-string">&quot;https://creativecommons.org/licenses/by/4.0/&quot;</span>,
+  <span class="ruby-value">testversion:</span>   <span class="ruby-string">&quot;1.0.0&quot;</span>,
+  <span class="ruby-value">protocol:</span>      <span class="ruby-string">&quot;https&quot;</span>,
+  <span class="ruby-value">host:</span>          <span class="ruby-string">&quot;tests.ostrails.eu&quot;</span>,
+  <span class="ruby-value">basePath:</span>      <span class="ruby-string">&quot;api&quot;</span>,
+  <span class="ruby-value">individuals:</span>   [{ <span class="ruby-string">&quot;name&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Mark Wilkinson&quot;</span>, <span class="ruby-string">&quot;email&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;mark.wilkinson@upm.es&quot;</span> }],
+  <span class="ruby-value">organizations:</span> [{ <span class="ruby-string">&quot;name&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;CBGP&quot;</span>, <span class="ruby-string">&quot;url&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;https://www.cbgp.upm.es&quot;</span> }]
+}
+
+<span class="ruby-identifier">record</span> = <span class="ruby-constant">FtrRuby</span><span class="ruby-operator">::</span><span class="ruby-constant">DCAT_Record</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">meta:</span> <span class="ruby-identifier">meta</span>)
+<span class="ruby-identifier">graph</span>  = <span class="ruby-identifier">record</span>.<span class="ruby-identifier">get_dcat</span>
+
+<span class="ruby-identifier">puts</span> <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-value">:turtle</span>)
+</pre>
+
+<span id="label-2.+Generating+Test+Output+-28Output-29" class="legacy-anchor"></span>
+<h3 id="2-generating-test-output-output"><a href="#2-generating-test-output-output">2. Generating Test Output (<code>Output</code>)</a></h3>
+
+<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&#39;ftr_ruby&#39;</span>
+
+<span class="ruby-comment"># Meta comes from the same test definition used for DCAT_Record</span>
+<span class="ruby-identifier">meta</span> = { <span class="ruby-operator">...</span> }   <span class="ruby-comment"># same hash as above</span>
+
+<span class="ruby-identifier">output</span> = <span class="ruby-constant">FtrRuby</span><span class="ruby-operator">::</span><span class="ruby-constant">Output</span>.<span class="ruby-identifier">new</span>(
+  <span class="ruby-value">testedGUID:</span> <span class="ruby-string">&quot;https://doi.org/10.1234/example.dataset&quot;</span>,
+  <span class="ruby-value">meta:</span> <span class="ruby-identifier">meta</span>
+)
+
+<span class="ruby-comment"># Add test results and comments</span>
+<span class="ruby-identifier">output</span>.<span class="ruby-identifier">score</span> = <span class="ruby-string">&quot;pass&quot;</span>
+<span class="ruby-identifier">output</span>.<span class="ruby-identifier">comments</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;The resource has a valid persistent identifier.&quot;</span>
+<span class="ruby-identifier">output</span>.<span class="ruby-identifier">comments</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;Identifier resolves correctly.&quot;</span>
+
+<span class="ruby-comment"># Optional: add guidance for non-passing cases</span>
+<span class="ruby-identifier">output</span>.<span class="ruby-identifier">guidance</span> = [
+  [<span class="ruby-string">&quot;https://example.org/fix-pid&quot;</span>, <span class="ruby-string">&quot;Register a persistent identifier&quot;</span>],
+]
+
+<span class="ruby-identifier">jsonld</span> = <span class="ruby-identifier">output</span>.<span class="ruby-identifier">createEvaluationResponse</span>
+<span class="ruby-identifier">puts</span> <span class="ruby-identifier">jsonld</span>
+</pre>
+<hr>
+
+<span id="label-Classes" class="legacy-anchor"></span>
+<h2 id="classes"><a href="#classes">Classes</a></h2>
+
+<span id="label-FtrRuby-3A-3ADCAT_Record" class="legacy-anchor"></span>
+<h3 id="ftrrubydcatrecord"><a href="#ftrrubydcatrecord"><a href="FtrRuby/DCAT_Record.html"><code>FtrRuby::DCAT_Record</code></a></a></h3>
+
+<p>Creates metadata describing the test itself.</p>
+<ul><li>
+<p>Builds a <code>dcat:DataService</code> + <code>ftr:Test</code></p>
+</li><li>
+<p>Automatically constructs endpoint URLs, landing pages, and identifiers</p>
+</li><li>
+<p>Includes indicators, metrics, themes, license, contact points, etc.</p>
+</li></ul>
+
+<p>See the class for full list of supported metadata fields.</p>
+
+<span id="label-FtrRuby-3A-3AOutput" class="legacy-anchor"></span>
+<h3 id="ftrrubyoutput"><a href="#ftrrubyoutput"><a href="FtrRuby/Output.html"><code>FtrRuby::Output</code></a></a></h3>
+
+<p>Represents the result of executing a FAIR test against a specific resource.</p>
+<ul><li>
+<p>Produces a <code>ftr:TestResult</code> linked to a <code>ftr:TestExecutionActivity</code></p>
+</li><li>
+<p>Includes score, summary, log/comments, guidance suggestions, and provenance</p>
+</li><li>
+<p>Outputs as JSON-LD (with configurable prefixes)</p>
+</li><li>
+<p>Automatically handles assessment target (the tested GUID)</p>
+</li></ul>
+
+<p><strong>Key methods:</strong></p>
+<ul><li>
+<p><code>new(testedGUID:, meta:)</code> – Initialize with the tested resource and test metadata</p>
+</li><li>
+<p><code>createEvaluationResponse</code> – Returns JSON-LD string of the full evaluation graph</p>
+</li></ul>
+<hr>
+
+<span id="label-Vocabulary+-26+Standards+Used" class="legacy-anchor"></span>
+<h2 id="vocabulary--standards-used"><a href="#vocabulary--standards-used">Vocabulary &amp; Standards Used</a></h2>
+<ul><li>
+<p><strong>DCAT</strong> – Data Catalog Vocabulary (W3C)</p>
+</li><li>
+<p><strong>DQV</strong> – Data Quality Vocabulary</p>
+</li><li>
+<p><strong>PROV</strong> – Provenance Ontology</p>
+</li><li>
+<p><strong>FTR</strong> – FAIR Test Registry vocabulary (<code>https://w3id.org/ftr#</code>)</p>
+</li><li>
+<p><strong>SIO</strong> – Semanticscience Integrated Ontology</p>
+</li><li>
+<p><strong>vCard</strong> – Contact points</p>
+</li><li>
+<p>Schema.org</p>
+</li></ul>
+<hr>
+
+<span id="label-Project+Structure" class="legacy-anchor"></span>
+<h2 id="project-structure"><a href="#project-structure">Project Structure</a></h2>
+
+<pre>ftr_ruby/
+├── lib/
+│   └── ftr_ruby.rb
+├── lib/ftr_ruby/
+│   ├── dcat_record.rb
+│   └── output.rb
+└── README.md</pre>
+<hr>
+
+<span id="label-Contributing" class="legacy-anchor"></span>
+<h2 id="contributing"><a href="#contributing">Contributing</a></h2>
+
+<p>Bug reports and pull requests are welcome on GitHub at: <a href="https://github.com/markwilkinson/ftr_ruby">github.com/markwilkinson/ftr_ruby</a></p>
+<hr>
+
+<span id="label-License" class="legacy-anchor"></span>
+<h2 id="license"><a href="#license">License</a></h2>
+
+<p>This project is licensed under the <a href="LICENSE">MIT License</a> (or specify your license).</p>
+<hr>
+
+<span id="label-Acknowledgments" class="legacy-anchor"></span>
+<h2 id="acknowledgments"><a href="#acknowledgments">Acknowledgments</a></h2>
+
+<p>Developed in the context of the <strong>OSTrails</strong> project and the <strong>FAIR Champion</strong> initiative.</p>
+<hr>
+
+<p><strong>Made with ❤️ for the FAIR community</strong></p>
+
+</main>
+
+<aside class="table-of-contents" role="complementary" aria-label="Table of Contents">
+  <div class="toc-sticky">
+    <h3 class="toc-heading">On This Page</h3>
+    <nav class="toc-nav" id="toc-nav" aria-label="Page sections">
+      <!-- Generated by JavaScript based on page headings -->
+    </nav>
+  </div>
+</aside>
+
+
+<footer class="site-footer">
+  
+
+  <div class="footer-bottom">
+    <p>
+      Generated by <a href="https://ruby.github.io/rdoc/">RDoc 7.2.0</a>
+      using the Aliki theme by <a href="http://st0012.dev">Stan Lo</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+
