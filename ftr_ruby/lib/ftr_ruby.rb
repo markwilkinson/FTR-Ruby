@@ -17,6 +17,10 @@ require "triple_easy" # provides "triplify" top-level function
 
 require "dcat_metadata"
 require "output"
+require "fdp_index"
+require "openapi"
+require "registertest"
+require "test_infrastructure"
 
 module FtrRuby
   class Error < StandardError; end
