@@ -32,7 +32,7 @@ module FtrRuby
     attr_accessor :identifier, :testname, :description, :keywords, :creator,
                   :indicators, :end_desc, :end_url, :dctype, :testid, :supportedby,
                   :license, :themes, :testversion, :implementations, :isapplicablefor, :applicationarea,
-                  :organizations, :individuals, :protocol, :host, :basePath, :metric, :landingpage
+                  :organizations, :individuals, :protocol, :host, :basePath, :metric, :landingpage, :definedby
 
     require_relative "./output"
     include TripleEasy # get the :"triplify" function
@@ -78,7 +78,6 @@ module FtrRuby
       @supportedby = meta[:supportedby] || ["https://tools.ostrails.eu/champion"]
       @applicationarea = meta[:applicationarea] || ["http://www.fairsharing.org/ontology/subject/SRAO_0000401"]
       @isapplicablefor = meta[:isapplicablefor] || ["https://schema.org/Dataset"]
-      @landingpage = meta[:landingPage] || @end_url
       @license = meta[:license] || "No License"
       @themes = meta[:themes] || []
       @themes = [@themes] unless @themes.is_a? Array
@@ -94,6 +93,8 @@ module FtrRuby
       @end_url = "#{protocol}://#{cleanhost}/#{cleanpath}/#{endpointpath}/#{testid}"
       @end_desc = "#{protocol}://#{cleanhost}/#{cleanpath}/#{testid}/api"
       @identifier = "#{protocol}://#{cleanhost}/#{cleanpath}/#{testid}"
+      @definedby =  meta[:definedby] || @identifier
+      @landingpage = meta[:landingPage] || @identifier
 
       unless @testid && @testname && @description && @creator && @end_desc && @end_url && @protocol && @host && @basePath
         warn "this record is invalid - it is missing one of  testid testname description creator  end_desc end_url protocol  host  basePath"
@@ -168,9 +169,8 @@ module FtrRuby
       # API URL	dcat:landingPage	rdfs:Resource
       triplify(me, dcat.landingPage, landingpage, g)
 
-      # Source of the test	codemeta:hasSourceCode/schema:codeRepository/ doap:repository	schema:SoftwareSourceCode/URL
-      # TODO
-      # FAIRChampion::Output.triplify(me, dcat.endpointDescription, end_desc, g)
+      # pointer to this turtle file
+      triplify(me, RDF::Vocab::RDFS.isDefinedBy, definedby, g)
 
       # Functional Descriptor/Operation	dcterms:type	xsd:anyURI
       triplify(me, dcterms.type, dctype, g)
@@ -185,9 +185,6 @@ module FtrRuby
 
       # Version	dcat:version	rdfs:Literal
       triplify(me, RDF::Vocab::DCAT.to_s + "version", testversion, g)
-
-      # # Version notes	adms:versionNotes	rdfs:Literal
-      # FAIRChampion::Output.triplify(me, dcat.version, version, g)
 
       triplify(me, sio["SIO_000233"], metric, g) # is implementation of
       triplify(metric, RDF.type, dqv.Metric, g) # is implementation of

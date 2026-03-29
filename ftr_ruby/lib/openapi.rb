@@ -23,11 +23,11 @@ module FtrRuby
       @protocol =  meta[:protocol].gsub(%r{[:/]}, "")
       @basePath =  meta[:basePath].gsub(%r{[:/]}, "")
       @basePath = "/#{basePath}" unless basePath[0] == "/" # must start with a slash
-      @path = meta[:path]
+      # @path = meta[:path]
       @response_description = meta[:response_description]
       @schemas = meta[:schemas]
       @endpointpath = "assess/test"
-      @end_url = "#{protocol}://#{host}#{basePath}/#{endpointpath}/#{testid}" # basepath starts with /
+      # @end_url = "#{protocol}://#{host}#{basePath}/#{endpointpath}/#{testid}" # basepath starts with /
     end
 
     def get_api
@@ -62,7 +62,7 @@ module FtrRuby
                   description:  >-
                     #{response_description}
         servers:
-          - url: "#{protocol}://#{host}/#{endpointpath}"
+          - url: "#{protocol}://#{host}#{basePath}/#{endpointpath}"
         components:
           schemas:
             schemas:
