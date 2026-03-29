@@ -1,7 +1,7 @@
 require "rest-client"
 module FtrRuby
   class Tests
-    def self.register_test(test_uri:)
+    def self.register_test(test_uri:, proxy_url: "https://tools.ostrails.eu/fdp-index-proxy/proxy")
       warn "registering new test"
       #       curl -v -L -H "content-type: application/json"
       # -d '{"clientUrl": "https://my.domain.org/path/to/DCAT/testdcat.ttl"}'
@@ -9,7 +9,7 @@ module FtrRuby
       begin
         response = RestClient::Request.execute({
                                                  method: :post,
-                                                 url: "https://tools.ostrails.eu/fdp-index-proxy/proxy",
+                                                 url: proxy_url,
                                                  headers: { "Accept" => "application/json",
                                                             "Content-Type" => "application/json" },
                                                  payload: { "clientUrl": test_uri }.to_json

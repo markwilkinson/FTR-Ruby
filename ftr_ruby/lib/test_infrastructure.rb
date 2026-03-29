@@ -1,10 +1,15 @@
 module FtrRuby
   class TestInfra
+    attr_accessor :test_path, :base_url
+
+    def initialize(test_path:, base_url:)
+      @test_path = test_path
+      @base_url  = base_url
+    end
+
     # there is a need to map between a test and its registered Metric in FS.  This will return the label for the test
     # in principle, we cojuld return a more complex object, but all I need now is the label
-    def self.get_tests_metrics(tests:)
-      base_url = ENV["TEST_BASE_URL"] || "http://localhost:8282" # Default to local server
-      test_path = ENV["TEST_PATH"] || "community-tests" # Default to local server
+    def get_tests_metrics(tests:)
       labels = {}
       landingpages = {}
       tests.each do |testid|
