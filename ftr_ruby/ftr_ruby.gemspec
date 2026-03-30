@@ -1,7 +1,12 @@
 # frozen_string_literal: true
 
-require_relative "lib/ftr_ruby/version"
+# frozen_string_literal: true
 
+# Robust way to load the version file during gem build
+lib = File.expand_path("lib", __dir__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require "ftr_ruby/version"
+# ... rest of your spec unchanged ...
 Gem::Specification.new do |spec|
   spec.name = "ftr_ruby"
   spec.version = FtrRuby::VERSION
