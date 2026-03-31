@@ -26,6 +26,7 @@ gem "require_all", "~> 3.0.0"
 gem "rest-client", "~> 2.1"
 gem "rubocop", "~> 1.21"
 gem "ruby-debug-ide"
+gem "safe_yaml"
 gem "shotgun"
 gem "triple_easy", "~> 0.1.0"
 gem "uri", "~> 1.1"
@@ -40,8 +41,6 @@ group :test do
   gem "rack-test", "~> 2.1.0"
   gem "rdf"
   gem "rspec", "~> 3.13.1"
-  gem "safe_yaml"
   gem "simplecov", "~> 0.22.0", require: false
   gem "webmock", "~> 3.18"
-  gem "rdbg"
 end
