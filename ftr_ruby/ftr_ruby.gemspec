@@ -36,9 +36,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # ==================== RUNTIME DEPENDENCIES ====================
-  # These are the ones your gem actually needs at runtime.
-  # Move only the ones that ftr_ruby itself requires here.
-  # Do NOT put development/test tools here.
 
   spec.add_runtime_dependency "base64", "~> 0.3" # often needed with rest-client etc.
   spec.add_runtime_dependency "connection_pool", "~> 2.4", "< 3.0"
@@ -47,7 +44,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "json-canonicalization", "~> 1.0"
   spec.add_runtime_dependency "jsonpath", "~> 1.1"
   spec.add_runtime_dependency "linkeddata", "~> 3.1"
-  spec.add_runtime_dependency "multi_json", "1.15.0"
+  spec.add_runtime_dependency "multi_json", "~> 1.5"
   spec.add_runtime_dependency "nokogiri", "1.18.10"
   spec.add_runtime_dependency "parseconfig", "~> 1.1"
   spec.add_runtime_dependency "rdf-raptor", "~> 3.2"
@@ -58,7 +55,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "triple_easy", "~> 0.1.0"
   spec.add_runtime_dependency "uri", "~> 1.1"
   spec.add_runtime_dependency "xml-simple", "~> 1.1"
-  # bcrypt is sometimes runtime, sometimes not — move only if ftr_ruby uses it directly
+  # bcrypt is someties runtime, sometimes not — move only if ftr_ruby uses it directly
 
   # ==================== DEVELOPMENT DEPENDENCIES (optional) ====================
   # These are useful when someone clones your gem repo to develop on it,
