@@ -80,9 +80,9 @@ module FtrRuby
 
       add_newline_to_comments
 
-      if summary =~ /^Summary$/
-        summary = "Summary of test results: #{comments[-1]}"
-        summary ||= "Summary of test results: #{comments[-2]}"
+      if @summary =~ /^Summary$/
+        @summary = "Summary of test results: #{comments[-1]}"
+        @summary ||= "Summary of test results: #{comments[-2]}"
       end
 
       executionid = "urn:ostrails:testexecutionactivity:" + SecureRandom.uuid
@@ -99,7 +99,7 @@ module FtrRuby
       triplify(uniqueid, dct.title, "#{name} OUTPUT", g)
       triplify(uniqueid, dct.description, "OUTPUT OF #{description}", g)
       triplify(uniqueid, dct.license, license, g)
-      triplify(uniqueid, prov.value, score, g)
+      triplify(uniqueid, prov.value, @score, g)
       triplify(uniqueid, ftr.summary, summary, g)
       triplify(uniqueid, RDF::Vocab::PROV.generatedAtTime, dt, g)
       triplify(uniqueid, ftr.log, comments.join, g)
@@ -134,10 +134,10 @@ module FtrRuby
       rescue StandardError
         triplify(uniqueid, ftr.assessmentTarget, "not a URI", g)
         triplify(executionid, prov.used, "not a URI", g)
-        score = "fail"
+        @score = "fail"
       end
 
-      unless score == "pass"
+      unless @score == "pass"
         guidance.each do |advice, label|
           adviceid = "urn:ostrails:testexecutionactivity:advice:" + SecureRandom.uuid
           triplify(uniqueid, ftr.suggestion, adviceid, g)

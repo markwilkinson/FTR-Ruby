@@ -1,5 +1,10 @@
 ## [Unreleased]
 
+## [0.1.12] - 2026-05-27
+
+### Fixed
+- `Output#createEvaluationResponse`: `score = "fail"` inside the `rescue` block and `summary = ...` inside the `if` block both introduced local variables that shadowed the `attr_accessor` methods for the entire method scope; replaced all references with `@score` and `@summary` to read and write the instance variables directly — this was causing `prov:value` to always be serialized as `nil` regardless of what callers set on `output.score`
+
 ## [0.1.11] - 2026-05-26
 
 ### Changed
