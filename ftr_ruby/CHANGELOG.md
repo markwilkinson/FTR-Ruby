@@ -1,5 +1,10 @@
 ## [Unreleased]
 
+## [0.1.13] - 2026-06-11
+
+### Fixed
+- `Output#initialize`: replaced aggressive `gsub(%r{[:/]}, "")` stripping on `protocol`, `host`, and `basePath` with holistic URL component normalization — strips scheme prefix from `host`, extracts only the scheme name from `protocol` (downcased), strips leading/trailing slashes from `basePath` while preserving internal path separators, and strips leading slashes from `testid` in `softwareid` construction; previously, a `basePath` like `/path/to/test` would be corrupted to `pathtotest` and port numbers in `host` would be destroyed
+
 ## [0.1.12] - 2026-05-27
 
 ### Fixed

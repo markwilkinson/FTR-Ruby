@@ -48,10 +48,11 @@ module FtrRuby
       @comments = []
       @guidance = meta.fetch(:guidance, [])
       @creator = meta[:creator]
-      @protocol = meta[:protocol].gsub(%r{[:/]}, "")
-      @host = meta[:host].gsub(%r{[:/]}, "")
-      @basePath = meta[:basePath].gsub(%r{[:/]}, "")
-      @softwareid = "#{@protocol}://#{@host}/#{@basePath}/#{meta[:testid]}"
+      @protocol   = meta[:protocol].to_s.split(%r{://}).first.to_s.strip.downcase
+      @host       = meta[:host].to_s.sub(%r{\A[a-zA-Z][a-zA-Z0-9+\-.]*://}, "").split("/").first.to_s.strip
+      @basePath   = meta[:basePath].to_s.sub(%r{\A[a-zA-Z][a-zA-Z0-9+\-.]*://[^/]*/}, "").gsub(%r{\A/+|/+\z}, "")
+      testid      = meta[:testid].to_s.sub(%r{\A/+}, "")
+      @softwareid = "#{@protocol}://#{@host}/#{[@basePath, testid].reject(&:empty?).join("/")}"
       @api = "#{@softwareid}/api"
     end
 
